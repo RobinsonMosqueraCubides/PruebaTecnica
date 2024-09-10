@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proveedores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Iniciar Sesión</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit" id="login">Iniciar Sesión</button>
+        </form>
+
+        <div id="login-status"></div>
+
+        <h1>Agregar Proveedor</h1>
+        <form id="proveedor-form">
+            <input type="text" id="NIT" placeholder="NIT/id" required>
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="text" id="cedula" placeholder="Cédula" required>
+        
+            <label for="tipo_proveedor">Tipo de Proveedor:</label>
+            <select id="tipo_proveedor" required>
+                <option value="Nacional">Nacional</option>
+                <option value="Internacional">Internacional</option>
+            </select>
+        
+            <label for="tipo_persona">Tipo de Persona:</label>
+            <select id="tipo_persona" required>
+                <option value="Natural">Natural</option>
+                <option value="Jurídica">Jurídica</option>
+            </select>
+        
+            <label for="beneficiarios">Beneficiarios (Nombres y Cédulas):</label>
+            <input type="text" id="nombreBene" placeholder="Nombre" required>
+            <input type="text" id="ccBene" placeholder="CC" required>
+        
+            <h3>Datos Bancarios</h3>
+            <input type="text" id="banco" placeholder="Banco" required>
+            <input type="text" id="numero_cuenta" placeholder="Número de Cuenta" required>
+            <input type="text" id="tipo_cuenta" placeholder="Tipo de Cuenta" required>
+        
+            <button type="submit" id="add">Agregar Proveedor</button>
+            <button type="submit" id="delete">Eliminar Proveedor</button>
+            <button type="submit" id="search">Buscar Proveedor</button>
+            <button type="submit" id="update">Actualizar Proveedor</button>
+        </form>
+        
+        <ul id="proveedores-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
